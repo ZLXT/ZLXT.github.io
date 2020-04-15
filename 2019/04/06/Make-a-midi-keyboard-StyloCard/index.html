@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.proxy.ustclug.org"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Make a midi keyboard(StyloCard) | 
+        
+        一条咸鱼
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #FF3030;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #D15FEE !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #D15FEE !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #D15FEE !important;
+  }
+
+  .toTop {
+    background: #ADD8E6 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #ADD8E6;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #ADD8E6;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #ADD8E6;
+  }
+
+  .post-toc a:hover {
+    color: #FF3030;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg.png);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一条咸鱼">
+    <meta name="msapplication-starturl" content="http://zlxt.github.io/2019/04/06/Make-a-midi-keyboard-StyloCard/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一条咸鱼">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://zlxt.github.io/2019/04/06/Make-a-midi-keyboard-StyloCard/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Make a midi keyboard(StyloCard) | 一条咸鱼">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Sat Apr 06 2019 17:01:09 GMT+0800">
+        <meta property="article:modified_time" content="Mon Apr 13 2020 21:04:22 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://zlxt.github.io/2019/04/06/Make-a-midi-keyboard-StyloCard/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zlxt.github.io/2019/04/06/Make-a-midi-keyboard-StyloCard/index.html",
+    "headline": "Make a midi keyboard(StyloCard)",
+    "datePublished": "Sat Apr 06 2019 17:01:09 GMT+0800",
+    "dateModified": "Mon Apr 13 2020 21:04:22 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ZLXT",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": ""
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一条咸鱼",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#center仿制stylocard-midi键盘center"><span class="post-toc-number">1.</span> <span class="post-toc-text"> 仿制StyloCard midi键盘</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centerpcb板center"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text"> PCB板</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#center成品右边笔的焊盘因为用的次数多了导致表面铜脱落了center"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text"> 成品（右边笔的焊盘因为用的次数多了，导致表面铜脱落了）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#center画知识点v-usbmidi协议center"><span class="post-toc-number">1.0.2.1.</span> <span class="post-toc-text"> 画知识点：V-USB，MIDI协议</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#centerv-usbcenter"><span class="post-toc-number">1.1.</span> <span class="post-toc-text"> V-USB</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其中用户需要注意的有文件是usbconfigh和usbdrvc"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">   其中用户需要注意的有文件是usbconfig.h和usbdrv.c。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#usbdrvc中是封装好的功能函数有"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">   usbdrv.c中是封装好的功能函数有：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#centermidi协议center"><span class="post-toc-number">1.2.</span> <span class="post-toc-text"> MIDI协议</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#center时间差center"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text"> 时间差</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#center非midi事件和系统码事件center"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text"> 非MIDI事件和系统码事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centermidi事件center"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text"> MIDI事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#center命令列表markdown的表格无法渲染只能用图片了center"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text"> 命令列表（Markdown的表格无法渲染，只能用图片了）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#按下音符noteon"><span class="post-toc-number">1.2.4.1.</span> <span class="post-toc-text"> 按下音符（noteon）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#松开音符noteoff"><span class="post-toc-number">1.2.4.2.</span> <span class="post-toc-text"> 松开音符（noteoff）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#滑音pitch-wheel"><span class="post-toc-number">1.2.4.3.</span> <span class="post-toc-text"> 滑音（Pitch Wheel）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其它的都没用过就不进行讲解了"><span class="post-toc-number">1.2.4.4.</span> <span class="post-toc-text"> 其它的都没用过就不进行讲解了。</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#center其中send函数的实现center"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text"> 其中send函数的实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#center后记center"><span class="post-toc-number">1.3.</span> <span class="post-toc-text"> 后记</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#center更新center"><span class="post-toc-number">1.4.</span> <span class="post-toc-text"> 更新</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 87 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Make a midi keyboard(StyloCard)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ZLXT</strong>
+        <span>4月 06, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="center仿制stylocard-midi键盘center"><a class="markdownIt-Anchor" href="#center仿制stylocard-midi键盘center"></a> <center><strong>仿制StyloCard midi键盘</strong></center></h1>
+<p>  最近在油管上看到这个效果惊艳的<a href="https://www.bilibili.com/video/av48449557" target="_blank" rel="noopener">StyloCard键盘</a>，简洁但不简单，极少的元件实现超棒的效果（其实是因为没钱买电子元件），于是决定仿制一个玩玩。</p>
+<p>  硬件方面十分简单，通过电阻的串联使每个按键都带有不同的电位，再用带有ADC的引脚读取即可识别按键下的按键。</p>
+<img src="/2019/04/06/Make-a-midi-keyboard-StyloCard/PCB.PNG" class="" title="PCB">
+<h3 id="centerpcb板center"><a class="markdownIt-Anchor" href="#centerpcb板center"></a> <center><strong>PCB板</strong></center></h3>
+<img src="/2019/04/06/Make-a-midi-keyboard-StyloCard/%E6%88%90%E5%93%81.PNG" class="" title="成品">
+<h3 id="center成品右边笔的焊盘因为用的次数多了导致表面铜脱落了center"><a class="markdownIt-Anchor" href="#center成品右边笔的焊盘因为用的次数多了导致表面铜脱落了center"></a> <center><strong>成品（右边笔的焊盘因为用的次数多了，导致表面铜脱落了）</strong></center></h3>
+<p>  难点在于用软件使Attiny85模拟成为USB设备（基于<a href="https://www.obdev.at/products/vusb/index.html" target="_blank" rel="noopener">V-USB</a>），以及实现midi设备的通讯协议。因为Attiny85可以使用Arduino来遍程，因此有极其丰富的库来进行调用。</p>
+<hr />
+<h4 id="center画知识点v-usbmidi协议center"><a class="markdownIt-Anchor" href="#center画知识点v-usbmidi协议center"></a> <center><strong>画知识点：V-USB，MIDI协议</strong></center></h4>
+<hr />
+<hr />
+<h2 id="centerv-usbcenter"><a class="markdownIt-Anchor" href="#centerv-usbcenter"></a> <center><strong>V-USB</strong></center></h2>
+<p>  我在Github找到了两个针对Attiny85的，可用的库分别是<a href="https://github.com/BlokasLabs/USBMIDI" target="_blank" rel="noopener">USBMIDI</a>和<a href="https://github.com/heartscrytech/DigisparkMIDI" target="_blank" rel="noopener">DigisparkMIDI</a>。两个库都是基于V-USB来实现的。为了偷懒，我选择使用DigisparkMIDI（我买的小板子是国产的Digispark）。</p>
+<pre><code>#include &lt;DigiMIDI.h&gt;//去掉Debug后的示例
+DigiMIDIDevice midi;
+void setup() {
+}
+void loop() {
+  midi.update(); //进行更新
+  midi.delay(500);//延时
+  midi.sendNoteOn(62,32);//发送按键按下的信息
+}
+</code></pre>
+<p>  示例里大部分都是Debug用的测试代码，有控制效果的只有几行。</p>
+<hr />
+<pre><code> void  sendNoteOn(int key, int velocity=0, uchar channel=1) {
+send(NoteOn,key,velocity,channel);
+}
+
+void  sendNoteOff(int key, int velocity=0, uchar channel=1) {
+send(NoteOff,key,velocity,channel);
+}
+
+void  sendProgramChange(int inProgramNumber, uchar channel=1) {
+send(ProgramChange,inProgramNumber,0,channel);
+}
+
+void  sendControlChange(int inControlNumber, int inControlValue=0, uchar channel=1) {
+send(ControlChange,inControlNumber,inControlValue,channel);
+}
+
+void  sendPolyPressure(int inNoteNumber, int inPressure, uchar channel=1) {
+send(AfterTouchPoly,inNoteNumber,inPressure,channel);
+}
+
+void  sendAfterTouch(int inPressure, uchar channel=1) {
+send(AfterTouchChannel, inPressure, 0, channel);
+}
+
+void  sendPitchBend(int inPitchValue, uchar channel=1) {
+const  unsigned bend = inPitchValue -  0;/*MIDI_PITCHBEND_MIN;*/
+send(PitchBend, (bend &amp;  0x7f), (bend &gt;&gt;  7) &amp;  0x7f, channel);
+}
+
+void  sendPitchBend(double inPitchValue, uchar channel=1) {
+const  int value = inPitchValue;// * MIDI_PITCHBEND_MAX;
+sendPitchBend(value, channel);
+}
+</code></pre>
+<p>   以上是封装好的可以直接使用的函数，具体作用可以看下边MIDI协议的讲解。</p>
+<hr />
+<pre><code>#include &lt;DigiMIDI.h&gt;
+DigiMIDIDevice midi;
+
+void setup() {
+  pinMode(2, INPUT);//设置带有ADC的引脚为输入
+}
+
+void loop() {
+  midi.update();
+  midi.delay(100);//延时1ms
+  int n = analogRead(1);//读取引脚的电压值
+  if (n &gt; 400 &amp;&amp; n &lt;= 550 )//判断是否按下
+  {
+    midi.sendNoteOn(69, 255); //按下按键
+    midi.delay(100);
+    midi.sendNoteOff(69, 255);//松开按键
+  }
+</code></pre>
+<p>  这是我代码中的一部分，其余部分原理一样，就不再进行赘述。</p>
+<hr />
+<p>   **重点是对V-USB的理解。**这里做简单介绍，详细可以去官网或者下文的引用博客中学习。<br />
+   首先要对USB协议有一定的了解，可以看下《圈圈教你玩USB》（书中的实例是基于51加一款USB芯片完成的）中关于USB协议的部分。<br />
+  AVRUSB针对AVR单片机，实现使用单片机的IO口来模拟USB的通信端口，由软件来实现USB通信协议，将普通的AVR单片机模拟成一个USB低速设备，从而实现AVR单片机与计算机之间的通信和控制。缺点是：只能模拟USB1.1协议，且模拟占用了十分多的CPU资源，过于复杂的项目不建议使用。<br />
+  硬件上需要单片机具有至少2 kB闪存，128字节RAM和至少12 MHz时钟速率（可以使用12 MHz，15 MHz，16 MHz 18 MHz或20 MHz晶振或12.8 MHz或16.5 MHz内部RC振荡器）。</p>
+<hr />
+<p>  V-USB代码文件有：</p>
+<ul>
+<li>usbconfig.h   用户配置文件</li>
+<li>iarcompat.h   为兼容IAR编译器而定义的宏</li>
+<li>usbdrv.h   usb驱动接口文件的头文件</li>
+<li>usbdrv.c   usb驱动接口文件</li>
+<li>usbdrvasm.asm   为兼容IAR编译器而使用的底层接口函数文件的别名</li>
+<li>usbdrvasm.S   汇编语言编写的底层接口函数</li>
+<li>oddebug.h   调试用函数的头文件（不使用调试功能时可以不添加）</li>
+<li>oddebug.c   包含调试用的函数（不使用调试功能时可以不添加）</li>
+</ul>
+<hr />
+<h3 id="其中用户需要注意的有文件是usbconfigh和usbdrvc"><a class="markdownIt-Anchor" href="#其中用户需要注意的有文件是usbconfigh和usbdrvc"></a>   其中用户需要注意的有文件是usbconfig.h和usbdrv.c。</h3>
+<p>  通过对usbconfig.h可以改变的设置有：</p>
+<ul>
+<li>USB_CFG_IOPORTNAME</li>
+</ul>
+<ul>
+<li>定义USB数据线使用的端口。只要是通用的IO都可以，没有特殊的要求。</li>
+</ul>
+<ul>
+<li>USB_CFG_DMINUS_BIT</li>
+</ul>
+<ul>
+<li>USB数据线D-使用的引脚。</li>
+</ul>
+<ul>
+<li>USB_CFG_DPLUS_BIT<br />
+ - USB数据线D+使用的引脚。因为D+要求同时连接到INT0上，所以一般情况下需要使用3个IO口。如果D+使用的引脚就是INT0，那么可以少使用一 个IO端口。</li>
+<li>USB_CFG_VENDOR_ID</li>
+</ul>
+<ul>
+<li>设备生产商的ID号</li>
+</ul>
+<ul>
+<li>USB_CFG_DEVICE_ID</li>
+</ul>
+<ul>
+<li>设备的产品ID号。这两个参数就是Windows识别USB设备的主要参数。需要注意的是，这两个参数都是低字节在前，高字节在后。</li>
+</ul>
+<ul>
+<li>USB_CFG_DEVICE_VERSION</li>
+</ul>
+<ul>
+<li>设备的版本号次版本号在前，主版本号在后。在Windows的设备管理中可以看到这个版本号</li>
+</ul>
+<ul>
+<li>USB_CFG_VENDOR_NAME</li>
+</ul>
+<ul>
+<li>设备生产商的名称，它在Windows的设备管理中可以看到。这里一般写入的是网址。</li>
+</ul>
+<ul>
+<li>USB_CFG_VENDOR_NAME_LEN</li>
+</ul>
+<ul>
+<li>设备生产商名称的长度。</li>
+</ul>
+<ul>
+<li>USB_CFG_DEVICE_NAME</li>
+</ul>
+<ul>
+<li>设备的名称，它在Windows的设备管理中可以看到。设备名称和生产商的名称都是以字符的方式定义的，它们目前不支持中文。</li>
+</ul>
+<ul>
+<li>USB_CFG_DEVICE_NAME_LEN</li>
+</ul>
+<ul>
+<li>设备名称的长度。</li>
+</ul>
+<hr />
+<h3 id="usbdrvc中是封装好的功能函数有"><a class="markdownIt-Anchor" href="#usbdrvc中是封装好的功能函数有"></a>   usbdrv.c中是封装好的功能函数有：</h3>
+<ul>
+<li>usbInit(void);</li>
+</ul>
+<ul>
+<li>初始化函数</li>
+</ul>
+<ul>
+<li>usbPoll(void);</li>
+</ul>
+<ul>
+<li>USB事件处理函数，需要在主循环中进行调用</li>
+</ul>
+<ul>
+<li>usbFunctionSetup(uchar data[8]);</li>
+</ul>
+<ul>
+<li>一般功能设置</li>
+</ul>
+<ul>
+<li>usbSetInterrupt(uchar *data, uchar len);</li>
+</ul>
+<ul>
+<li>此函数设置将在下一次中断IN传输期间发送的消息。</li>
+</ul>
+<ul>
+<li>usbFunctionRead(uchar *data, uchar len);</li>
+</ul>
+<ul>
+<li>主机从单片机中读取数据</li>
+</ul>
+<ul>
+<li>usbFunctionWrite(uchar *data, uchar len);</li>
+</ul>
+<ul>
+<li>主机向单片机写入数据</li>
+</ul>
+<p>  以上函数是常用功能，还有其它函数在文件中也有较多注释（没用过，也不太懂，就不乱讲了）。</p>
+<hr />
+<hr />
+<h2 id="centermidi协议center"><a class="markdownIt-Anchor" href="#centermidi协议center"></a> <center><strong>MIDI协议</strong></center></h2>
+<p>  由于MIDI协议中涉及较多与项目无关的控制，就不再依次进行介绍，捡重点部分进行说明。<br />
+  我们对键盘的控制，就是通过USB向电脑上的软件发送MIDI音轨的信息，如同直接操作软件上的音轨。换句话来讲就是当你在MIDI键盘上按下一个琴键，你不是在制造一个声音而是发出一条MIDI指令。发送信息的种类有：时间差（delta-time），MIDI事件（ MIDI events），非MIDI事件（ Non-MIDI events）和系统码事件（sysex event）。</p>
+<hr />
+<h3 id="center时间差center"><a class="markdownIt-Anchor" href="#center时间差center"></a> <center><strong>时间差</strong></center></h3>
+<p>  时间差是可变常量（variable length quantity），表示的是将要发生的事件与前一事件之间的时间差值。两个事件同时发生，时间差设为零。</p>
+<hr />
+<h3 id="center非midi事件和系统码事件center"><a class="markdownIt-Anchor" href="#center非midi事件和系统码事件center"></a> <center><strong>非MIDI事件和系统码事件</strong></center></h3>
+<p>  这两种事件中包含了MIDI文件中的非MIDI信息。有版权信息，乐器名称，设备名称，音源设备编号等等。与实现键盘演奏关系不大，就不再进行赘述。</p>
+<hr />
+<h3 id="centermidi事件center"><a class="markdownIt-Anchor" href="#centermidi事件center"></a> <center><strong>MIDI事件</strong></center></h3>
+<p>  MIDI事件有音符事件、控制器事件和系统信息事件等。命令的格式一般为：时间差+指令种类+参数（包含音调和力度）组成。</p>
+<img src="/2019/04/06/Make-a-midi-keyboard-StyloCard/%E5%91%BD%E4%BB%A4%E5%88%86%E7%B1%BB.PNG" class="" title="命令分类">
+<h3 id="center命令列表markdown的表格无法渲染只能用图片了center"><a class="markdownIt-Anchor" href="#center命令列表markdown的表格无法渲染只能用图片了center"></a> <center><strong>命令列表（Markdown的表格无法渲染，只能用图片了）</strong></center></h3>
+<p>  MIDI音符的有效范围是0-127，16进制是00-7FH，对映软件上的127个按键，由小到大依次对应音符。<br />
+  音符的力度，也称为按键的速度，范围是1-127，也即01-FF，当按下或松开音符的力度为0时，表示松开音符。</p>
+<hr />
+<h4 id="按下音符noteon"><a class="markdownIt-Anchor" href="#按下音符noteon"></a> 按下音符（noteon）</h4>
+<p>  例如命令：按下中音A 为00 96 45 70。其中00为时间差，96为命令类型和通道选择（这里是第7个通道），45为音符，70为力度（上面的命令为16进制）。</p>
+<h4 id="松开音符noteoff"><a class="markdownIt-Anchor" href="#松开音符noteoff"></a> 松开音符（noteoff）</h4>
+<p>  命令：松开中音A 为00 86 45 70。同上，只有命令类型改变了。</p>
+<h4 id="滑音pitch-wheel"><a class="markdownIt-Anchor" href="#滑音pitch-wheel"></a> 滑音（Pitch Wheel）</h4>
+<p>  用不同的滑音参数调整MIDI器件来改变音符的值，同时对于不同的MIDI器件的通道，滑音的信息是不同的。00 E6 00 40。其中 00时间差，E6表示滑音，在第7通道使用滑音，设置滑音值为0，代入公式：参数是0-（-8192）=8192，8192的7位双字节表示成8192 mod 128=00H（字节的最高位设置为0），8192 div 128=128*64=40H（字节的最高位设置为0）。</p>
+<h4 id="其它的都没用过就不进行讲解了"><a class="markdownIt-Anchor" href="#其它的都没用过就不进行讲解了"></a> 其它的都没用过就不进行讲解了。</h4>
+<img src="/2019/04/06/Make-a-midi-keyboard-StyloCard/%E6%BA%90%E7%A0%81.PNG" class="" title="源码">
+<p>  这是在MIDI库的源码中，对于命令的实现，其中的命令类型已经事先定义好了。</p>
+<img src="/2019/04/06/Make-a-midi-keyboard-StyloCard/send.PNG" class="" title="send">
+<h3 id="center其中send函数的实现center"><a class="markdownIt-Anchor" href="#center其中send函数的实现center"></a> <center><strong>其中send函数的实现</strong></center></h3>
+<p>  因为库的作者也是修改别人的库，所以其中标What is this？的参数实际上是时间差。send函数使用的是usbSetInterrupt(uchar *data, uchar len);函数进行的数据发送，正好可以一次性发送完整个命令，不用分成多次进行传输。</p>
+<hr />
+<hr />
+<h2 id="center后记center"><a class="markdownIt-Anchor" href="#center后记center"></a> <center><strong>后记</strong></center></h2>
+<p>  因为对音乐，乐理什么的一窍不通，所以一些高级的应用完全没有头绪，滑音也没能实现。虽然项目实现的不太好，但是找到了V-USB这个方便的库，对于一些便宜的芯片来说十分好用。而且Attiny还可以很方便得实现微型游戏机，等闲了可以搞一个出来。关于MIDI协议和V-USB更详细得内容可以查看参考文献和官方示例。</p>
+<hr />
+<h2 id="center更新center"><a class="markdownIt-Anchor" href="#center更新center"></a> <center><strong>更新</strong></center></h2>
+<p>  趁着PCB制作厂商推出价格优惠制板了，成品看起来还是不错的。</p>
+<img src="/2019/04/06/Make-a-midi-keyboard-StyloCard/%E5%B7%A5%E5%8E%82%E6%88%90%E5%93%81.PNG" class="" title="工厂成品">
+<hr />
+<p>参考:<br />
+1.AVR-USB(<a href="http://lionwq.spaces.eepw.com.cn/articles/categorys/category/1824" target="_blank" rel="noopener">http://lionwq.spaces.eepw.com.cn/articles/categorys/category/1824</a>)<br />
+2.MIDI协议（<a href="https://blog.csdn.net/shao941122/article/details/46124865%EF%BC%89" target="_blank" rel="noopener">https://blog.csdn.net/shao941122/article/details/46124865）</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2020/04/11/Hexo&Typora&Markdown/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/01/12/My-Z80-computer-design/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="ZLXT's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zlxt36@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Attiny85/">Attiny85<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Markdown/">Markdown<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/STM32/">STM32<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Z80/">Z80<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%85%B6%E5%AE%83/">其它<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">5</span>
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一条咸鱼
+            
+                <br>
+                
+                    兴趣使然的博客。
+                
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#4EEE94'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #4EEE94, 0 0 15px #4EEE94'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#4EEE94',
+        'border-left-color': '#4EEE94'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2018;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        </body>
+    
+</html>
